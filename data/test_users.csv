@@ -1,0 +1,4 @@
+country,title,first_name,last_name,dob,doj,email,phone_code,phone_number,comm_method
+India,Dr.,Anil varma,Chitturi,1995-05-15,25/11/2026,arjun.sharma@example.test,+91,9876543210,Email
+United States,Mr.,Karthik,Penumallu,1990-08-20,01/12/2026,john.doe@example.test,+1,2025550143,Phone
+India,Mr.,DP,Dasari,1995-05-12,25/11/2026,dp.dasari@outlook.test,+91,9666954949,Email

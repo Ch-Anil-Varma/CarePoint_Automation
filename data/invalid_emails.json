@@ -1,0 +1,5 @@
+[
+  {"email": "plainaddress", "description": "Missing @ symbol and domain"},
+  {"email": "user@domain", "description": "Missing top-level domain (.com)"},
+  {"email": "@missingusername.com", "description": "Missing local username part"}
+]

@@ -1,0 +1,6 @@
+{
+  "base_url": "https://www.qapractice.com/practice-forms",
+  "browser": "chrome",
+  "headless": false,
+  "explicit_wait": 10
+}
