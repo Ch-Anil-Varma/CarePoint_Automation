@@ -1,51 +1,54 @@
-# Web Form Automation
+# Practice Form Task Automation
 
-Pytest and Selenium checks for the practice form at `https://www.qapractice.com/practice-forms`.
-The tests use synthetic data only; the site states that submitted data is not stored.
+This repository demonstrates a completed Selenium automation task against the
+practice form at [qapractice.com/practice-forms](https://www.qapractice.com/practice-forms).
+It shows the automated interactions, validation checks, and test results delivered
+for the task. It is a demonstration project, not a packaged framework intended for
+reuse across other sites or projects.
 
-## Requirements
+Only synthetic test data is used.
 
-- Python 3.10 or newer
-- Google Chrome or Microsoft Edge
+## Demonstrated work
 
-## Install
+- Select country, title, and phone-code dropdown values.
+- Enter user details and dates, including a dynamically calculated future joining date.
+- Verify successful form submission and validation for missing names and invalid emails.
+- Check radio-button exclusivity, form reset behavior, and button state.
+- Capture test outcomes in shareable pytest HTML reports.
+
+## Task results
+
+| Run | Result | Report |
+| --- | --- | --- |
+| Chrome full suite | 13 passed, 0 failed | [View report](reports/report.html) |
+| Edge smoke run | 4 passed, 0 failed | [View report](reports/edge_smoke_report.html) |
+
+The Chrome report is the latest full-suite run. The Edge report records an earlier
+smoke run; it is included as additional task evidence, not a claim that the latest
+full suite was run in Edge.
+
+## Run the demonstration
+
+Requirements: Python 3.10 or newer and Google Chrome or Microsoft Edge.
 
 ```powershell
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-```
-
-## Run tests
-
-Run the full suite in the browser configured in `config/config.json`:
-
-```powershell
 pytest
 ```
 
-Run headlessly or select a browser:
+Optionally run headlessly or select a browser:
 
 ```powershell
 pytest --headless
 pytest --browser edge --headless
 ```
 
-Run only the smoke or negative-validation checks:
+## Files
 
-```powershell
-pytest -m smoke
-pytest -m negative
-```
-
-The pytest HTML report is generated at `reports/report.html`; failure and submission
-screenshots are written under `reports/screenshots/`. These generated artifacts are
-excluded from version control.
-
-## Project layout
-
-- `pages/`: Page objects and shared Selenium interactions
-- `tests/`: Pytest and unittest cases
+- `pages/`: Form page object and shared Selenium interactions
+- `tests/`: Pytest and unittest demonstrations
 - `data/`: Synthetic CSV and JSON test inputs
-- `config/config.json`: Target URL, browser, and explicit wait setting
-- `utilities/`: Configuration, data, and logging helpers
+- `config/config.json`: Target URL, browser, and wait setting
+- `reports/`: HTML reports from the demonstrated test runs

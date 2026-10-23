@@ -3,4 +3,4 @@ venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
-reports/
+reports/execution.log
