@@ -16,6 +16,18 @@ Only synthetic test data is used.
 - Check radio-button exclusivity, form reset behavior, and button state.
 - Capture test outcomes in shareable pytest HTML reports.
 
+## Screenshots
+
+Screenshots from the task runs are included in [`reports/screenshots/`](reports/screenshots/).
+
+**Completed form**
+
+![Completed practice form](reports/screenshots/task_form_completed.png)
+
+**Successful submission**
+
+![Successful form submission confirmation](reports/screenshots/task_submission_success.png)
+
 ## Task results
 
 | Run | Result | Report |
@@ -51,4 +63,4 @@ pytest --browser edge --headless
 - `tests/`: Pytest and unittest demonstrations
 - `data/`: Synthetic CSV and JSON test inputs
 - `config/config.json`: Target URL, browser, and wait setting
-- `reports/`: HTML reports from the demonstrated test runs
+- `reports/`: HTML reports and screenshots from the demonstrated test runs
